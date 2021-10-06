@@ -9,7 +9,7 @@ mgmt:
   name: arcas-mgmt
   version: 1.4.0
 shared_services:
-  deployed: true
+  deployed: false
   extensions:
     certManager:
       deployed: false
