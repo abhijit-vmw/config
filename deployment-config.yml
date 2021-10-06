@@ -1,0 +1,124 @@
+---
+bootstrap:
+  server: 192.168.100.44
+  username: root
+  password: root
+
+vsphere:
+  server: 10.202.233.1
+  username: administrator@vsphere.local
+  password: <encoded:QWRtaW4hMjM=>
+  tls_thumbprint: F2:23:10:0F:A0:5E:22:D0:ED:0B:88:DC:3B:CA:E0:CE:29:AA:41:F8
+
+tkg:
+  mgmt:
+    cluster:
+      name: arcas-mgmt
+      plan: dev
+    deployment:
+      datacenter: /VMW-wAnywhere-DC
+      datastore: /VMW-wAnywhere-DC/datastore/local-ssd-a1908
+      folder: /VMW-wAnywhere-DC/vm/Arcas-Lab/Arcas-Pipeline/Management
+      network: arcas-management-pg
+      resource_pool: /VMW-wAnywhere-DC/host/cVMW-wAnywhere-Collab-CLU/Resources
+    ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCwg2MOzjL+woGDKZVbUYQ0IWTIn6JIcxDxK1AX2Ox4GOeiIc4DWmbRAhHGl5ATIufJ7M1fODncc8jk0kySL7UIX7KCuzFcf8Iezypv67DtliFUuRorLVXAbwjkjcFj9fcAo4S7CUBLI0XA7RVgXrGWajwBeKP5AVgfVC6/zLxdNzMn4oJyBjBwz3ogD/NCIpYy+81Hy0wgIJPh8CwAKECFSuD+9V/nBJm9zuM1zH3T3hdVI58jGnmdGVEZQUX3opdKTWvPfT2NuXH1cjGXxqjN8k5Prq8996uieuIoF8wQBFwZhFnvUbjpBze2VZyd33fBqyHyAwdyn104nxiq6N8EgRk3KbHFN4xRoZg3QcoSgrixn6OcifcsFLz3mYD1BLFbsVjBZZMQizcXoWSP6VrbjCpWpSXIPYt68zd6kOwQEqYJ/zKCNoHwEXE7Ucxq2ijdqrNCzVW8BqKqkHFpRVyxY3t75vLfPbs97yGrZJKbOSN4Hs5GWH92BEwKu6sF2R/K6na2d2q6pD1WJbh5yYvdQFa8q+gjsjt1oTYa6cOIQ8SZhseCrG1f653nl/ryKGsyRxigP5YNjgDZu9nNWKimRERtUTAaz6b86wd/Uz9xwEYnK+1mw6ODJmCojOLp9h3m6FNHVvfePBK8hTsXFYXVGmccuB5cCfE5luVffAKy1w== akangale@vmware.com
+    control_plane:
+      endpoint: "192.168.101.22"
+      disk_gib: '20'
+      mem_mib: '4096'
+      cpus: '2'
+    worker:
+      endpoint:
+      disk_gib: '20'
+      mem_mib: '4096'
+      cpus: '2'
+  shared_services:
+    cluster:
+      name: arcas-shared-services
+      plan: dev
+    deployment:
+      datacenter: /VMW-wAnywhere-DC
+      datastore: /VMW-wAnywhere-DC/datastore/local-ssd-a1908
+      folder: /VMW-wAnywhere-DC/vm/Arcas-Lab/Arcas-Pipeline/Shared-Service
+      network: arcas-sharedService-pg
+      resource_pool: /VMW-wAnywhere-DC/host/cVMW-wAnywhere-Collab-CLU/Resources
+    ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCwg2MOzjL+woGDKZVbUYQ0IWTIn6JIcxDxK1AX2Ox4GOeiIc4DWmbRAhHGl5ATIufJ7M1fODncc8jk0kySL7UIX7KCuzFcf8Iezypv67DtliFUuRorLVXAbwjkjcFj9fcAo4S7CUBLI0XA7RVgXrGWajwBeKP5AVgfVC6/zLxdNzMn4oJyBjBwz3ogD/NCIpYy+81Hy0wgIJPh8CwAKECFSuD+9V/nBJm9zuM1zH3T3hdVI58jGnmdGVEZQUX3opdKTWvPfT2NuXH1cjGXxqjN8k5Prq8996uieuIoF8wQBFwZhFnvUbjpBze2VZyd33fBqyHyAwdyn104nxiq6N8EgRk3KbHFN4xRoZg3QcoSgrixn6OcifcsFLz3mYD1BLFbsVjBZZMQizcXoWSP6VrbjCpWpSXIPYt68zd6kOwQEqYJ/zKCNoHwEXE7Ucxq2ijdqrNCzVW8BqKqkHFpRVyxY3t75vLfPbs97yGrZJKbOSN4Hs5GWH92BEwKu6sF2R/K6na2d2q6pD1WJbh5yYvdQFa8q+gjsjt1oTYa6cOIQ8SZhseCrG1f653nl/ryKGsyRxigP5YNjgDZu9nNWKimRERtUTAaz6b86wd/Uz9xwEYnK+1mw6ODJmCojOLp9h3m6FNHVvfePBK8hTsXFYXVGmccuB5cCfE5luVffAKy1w== akangale@vmware.com
+    control_plane:
+      endpoint: "192.168.102.22"
+      disk_gib: '20'
+      mem_mib: '4096'
+      cpus: '2'
+    worker:
+      endpoint:
+      disk_gib: '20'
+      mem_mib: '4096'
+      cpus: '2'
+    extensions_spec:
+      harbor:
+        adminPassword: Admin!23Admin!23
+        hostname: harbor.arcas.lab
+        storage:
+          datastore: /VMW-wAnywhere-DC/datastore/local-ssd-a1908
+          name: tkgPolicy
+  workload_clusters:
+    - cluster:
+        name: arcas-workload
+        plan: dev
+      deployment:
+        datacenter: /VMW-wAnywhere-DC
+        datastore: /VMW-wAnywhere-DC/datastore/local-ssd-a1908
+        folder: /VMW-wAnywhere-DC/vm/Arcas-Lab/Arcas-Pipeline/Workload
+        network: arcas-workload-pg
+        resource_pool: /VMW-wAnywhere-DC/host/cVMW-wAnywhere-Collab-CLU/Resources
+      ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCwg2MOzjL+woGDKZVbUYQ0IWTIn6JIcxDxK1AX2Ox4GOeiIc4DWmbRAhHGl5ATIufJ7M1fODncc8jk0kySL7UIX7KCuzFcf8Iezypv67DtliFUuRorLVXAbwjkjcFj9fcAo4S7CUBLI0XA7RVgXrGWajwBeKP5AVgfVC6/zLxdNzMn4oJyBjBwz3ogD/NCIpYy+81Hy0wgIJPh8CwAKECFSuD+9V/nBJm9zuM1zH3T3hdVI58jGnmdGVEZQUX3opdKTWvPfT2NuXH1cjGXxqjN8k5Prq8996uieuIoF8wQBFwZhFnvUbjpBze2VZyd33fBqyHyAwdyn104nxiq6N8EgRk3KbHFN4xRoZg3QcoSgrixn6OcifcsFLz3mYD1BLFbsVjBZZMQizcXoWSP6VrbjCpWpSXIPYt68zd6kOwQEqYJ/zKCNoHwEXE7Ucxq2ijdqrNCzVW8BqKqkHFpRVyxY3t75vLfPbs97yGrZJKbOSN4Hs5GWH92BEwKu6sF2R/K6na2d2q6pD1WJbh5yYvdQFa8q+gjsjt1oTYa6cOIQ8SZhseCrG1f653nl/ryKGsyRxigP5YNjgDZu9nNWKimRERtUTAaz6b86wd/Uz9xwEYnK+1mw6ODJmCojOLp9h3m6FNHVvfePBK8hTsXFYXVGmccuB5cCfE5luVffAKy1w== akangale@vmware.com
+      control_plane:
+        endpoint: "192.168.110.22"
+        disk_gib: '20'
+        mem_mib: '4096'
+        cpus: '2'
+      worker:
+        endpoint:
+        disk_gib: '20'
+        mem_mib: '4096'
+        cpus: '2'
+      extensions_spec:
+        grafana:
+          adminPassword: Admin!23
+
+avi:
+  vm_name: "arcas-avi"
+  # password: Admin!23
+  password: <encoded:QWRtaW4hMjM=>
+  username: admin
+  # vip network
+  data_network:
+    name: arcas-aviMgmt-pg
+    cidr: 192.168.200.0/24
+    static_range: 192.168.200.5-192.168.200.45
+  cloud:
+    name: Default-Cloud
+    se_group: 'Default-Group'
+    dc: VMW-wAnywhere-DC
+    pg: "arcas-aviVip-pg"
+    ipam: "arcas cloud ipam"
+    dns:
+      name: "arcas dns profiles"
+      domain: "arcas.local"
+  deployment:
+    datacenter: /VMW-wAnywhere-DC
+    folder: /VMW-wAnywhere-DC/vm/Arcas-Lab/Arcas-Pipeline/Avi-Controller
+    resource_pool: /VMW-wAnywhere-DC/host/cVMW-wAnywhere-Collab-CLU/Resources
+    datastore: /VMW-wAnywhere-DC/datastore/local-ssd-a1908
+    network: arcas-aviMgmt-pg
+    parameters:
+      gateway: 192.168.200.253
+      netmask: 255.255.255.0
+      ip: 192.168.200.20
+  conf:
+    dns: [192.168.100.5]
+    ntp: [139.59.55.93, 165.22.213.178]
+    backup:
+      passphrase: VMware123!
+    cert:
+      name: "New Self Signed"
+      common_name: "arcas.local"
