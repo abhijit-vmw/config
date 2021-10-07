@@ -4,8 +4,8 @@ avi:
   name: ''
   version: 20.1.6
 mgmt:
-  deployed: true
-  health: UP
+  deployed: false
+  health: DOWN
   name: arcas-mgmt
   version: 1.4.0
 shared_services:
