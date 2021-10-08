@@ -53,13 +53,6 @@ tkg:
       disk_gib: '20'
       mem_mib: '4096'
       cpus: '2'
-    extensions_spec:
-      harbor:
-        adminPassword: Admin!23Admin!23
-        hostname: harbor.arcas.lab
-        storage:
-          datastore: /VMW-wAnywhere-DC/datastore/local-ssd-a1908
-          name: tkgPolicy
   workload_clusters:
     - cluster:
         name: arcas-workload
