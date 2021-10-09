@@ -1,0 +1,30 @@
+avi:
+  deployed: false
+  health: DOWN
+  name: ''
+  version: ''
+mgmt:
+  deployed: false
+  health: DOWN
+  name: ''
+  version: ''
+shared_services:
+  deployed: false
+  extensions:
+    certManager:
+      deployed: false
+      upgraded: false
+    contour:
+      deployed: false
+      upgraded: false
+    externalDns:
+      deployed: false
+      upgraded: false
+    harbor:
+      deployed: false
+      upgraded: false
+  health: DOWN
+  name: ''
+  upgradedFrom: null
+  version: ''
+workload_clusters: []
