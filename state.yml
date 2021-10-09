@@ -1,8 +1,8 @@
 avi:
-  deployed: false
-  health: DOWN
+  deployed: true
+  health: UP
   name: ''
-  version: ''
+  version: 20.1.6
 mgmt:
   deployed: false
   health: DOWN
