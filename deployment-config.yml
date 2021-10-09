@@ -2,7 +2,7 @@
 bootstrap:
   server: 192.168.100.36
   username: root
-  password: root
+  password: VMware@12345
 
 vsphere:
   server: 10.202.233.1
