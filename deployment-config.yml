@@ -1,6 +1,6 @@
 ---
 bootstrap:
-  server: 192.168.100.36
+  server: 192.168.100.41
   username: root
   password: VMware@12345
 
