@@ -1,6 +1,6 @@
 ---
 bootstrap:
-  server: 192.168.100.41
+  server: 192.168.100.46
   username: root
   password: VMware@12345
 
@@ -23,7 +23,7 @@ tkg:
       resource_pool: /VMW-wAnywhere-DC/host/cVMW-wAnywhere-Collab-CLU/Resources
     ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCiPnfEsJneA8RQFE1Gp+KbL+DGJaT63tsHHiVxCOjumIP1KoU/Cjf89OaQyxvUjvbTYFtvinVgzXjpOLSBXOqeguXith8AkFFO8if+zVkq7jiMmNsQNvZr01CdPBFK6dFG3VQqdza4HCDY4fc1TAmaS5Kcx/X9OY8z5MiE5iReJ71pG+usSyOwv/vTxq3VJTw/Rdn8dJ2aSPCF5E/eC1poB7l+ESKhfk0MMlTi1Bs1tWYnTpTvIOHUsQctA/XaJNgfbQgswimRr25dO2/jYR6FNkcxop1JFbw9AkMTUgYL4GKpLWX4JZWbdeAa9hBwP6cZKp3/RNJXvuWOYVhDddjXmU/10vb1SApKujRXRKS9c/5UtIHf39LF/2Vu0Ck1BNZofciaojWeDI2mB5fs2VyFjEBol6lchcvwKQHGj2hBb2sFS+rEsh5//eUsiDbncd8kmqsq52uj2ZgkZSlYzQgB77WwQr3EprnajiD5+lrPIwZnMlJrfUeW8UCFK+4tElXUa0dNIEWjzgq5AkgVWtvr0dRADBqx3MfOeRbvrsy0NUOI2HA4wYP7AY65SbXGV531baMQo62MYnb9kVc/IITzen4ic747XQPubONyIV899JBWLzoE5rpLXXNEJAJhGkNvAVhwCncfAm+9ChRMlmkgj0CFZ37GqqKgGC50s8ASgQ== akangale@vmware.com
     control_plane:
-      endpoint: "192.168.101.27"
+      endpoint: "192.168.101.44"
       disk_gib: '20'
       mem_mib: '4096'
       cpus: '2'
@@ -44,7 +44,7 @@ tkg:
       resource_pool: /VMW-wAnywhere-DC/host/cVMW-wAnywhere-Collab-CLU/Resources
     ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCiPnfEsJneA8RQFE1Gp+KbL+DGJaT63tsHHiVxCOjumIP1KoU/Cjf89OaQyxvUjvbTYFtvinVgzXjpOLSBXOqeguXith8AkFFO8if+zVkq7jiMmNsQNvZr01CdPBFK6dFG3VQqdza4HCDY4fc1TAmaS5Kcx/X9OY8z5MiE5iReJ71pG+usSyOwv/vTxq3VJTw/Rdn8dJ2aSPCF5E/eC1poB7l+ESKhfk0MMlTi1Bs1tWYnTpTvIOHUsQctA/XaJNgfbQgswimRr25dO2/jYR6FNkcxop1JFbw9AkMTUgYL4GKpLWX4JZWbdeAa9hBwP6cZKp3/RNJXvuWOYVhDddjXmU/10vb1SApKujRXRKS9c/5UtIHf39LF/2Vu0Ck1BNZofciaojWeDI2mB5fs2VyFjEBol6lchcvwKQHGj2hBb2sFS+rEsh5//eUsiDbncd8kmqsq52uj2ZgkZSlYzQgB77WwQr3EprnajiD5+lrPIwZnMlJrfUeW8UCFK+4tElXUa0dNIEWjzgq5AkgVWtvr0dRADBqx3MfOeRbvrsy0NUOI2HA4wYP7AY65SbXGV531baMQo62MYnb9kVc/IITzen4ic747XQPubONyIV899JBWLzoE5rpLXXNEJAJhGkNvAVhwCncfAm+9ChRMlmkgj0CFZ37GqqKgGC50s8ASgQ== akangale@vmware.com
     control_plane:
-      endpoint: "192.168.102.22"
+      endpoint: "192.168.102.44"
       disk_gib: '20'
       mem_mib: '4096'
       cpus: '2'
@@ -65,7 +65,7 @@ tkg:
         resource_pool: /VMW-wAnywhere-DC/host/cVMW-wAnywhere-Collab-CLU/Resources
       ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCiPnfEsJneA8RQFE1Gp+KbL+DGJaT63tsHHiVxCOjumIP1KoU/Cjf89OaQyxvUjvbTYFtvinVgzXjpOLSBXOqeguXith8AkFFO8if+zVkq7jiMmNsQNvZr01CdPBFK6dFG3VQqdza4HCDY4fc1TAmaS5Kcx/X9OY8z5MiE5iReJ71pG+usSyOwv/vTxq3VJTw/Rdn8dJ2aSPCF5E/eC1poB7l+ESKhfk0MMlTi1Bs1tWYnTpTvIOHUsQctA/XaJNgfbQgswimRr25dO2/jYR6FNkcxop1JFbw9AkMTUgYL4GKpLWX4JZWbdeAa9hBwP6cZKp3/RNJXvuWOYVhDddjXmU/10vb1SApKujRXRKS9c/5UtIHf39LF/2Vu0Ck1BNZofciaojWeDI2mB5fs2VyFjEBol6lchcvwKQHGj2hBb2sFS+rEsh5//eUsiDbncd8kmqsq52uj2ZgkZSlYzQgB77WwQr3EprnajiD5+lrPIwZnMlJrfUeW8UCFK+4tElXUa0dNIEWjzgq5AkgVWtvr0dRADBqx3MfOeRbvrsy0NUOI2HA4wYP7AY65SbXGV531baMQo62MYnb9kVc/IITzen4ic747XQPubONyIV899JBWLzoE5rpLXXNEJAJhGkNvAVhwCncfAm+9ChRMlmkgj0CFZ37GqqKgGC50s8ASgQ== akangale@vmware.com
       control_plane:
-        endpoint: "192.168.110.22"
+        endpoint: "192.168.110.44"
         disk_gib: '20'
         mem_mib: '4096'
         cpus: '2'
