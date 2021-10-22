@@ -13,6 +13,8 @@ vsphere:
 image_name: 10.202.233.205:80/library/tanzu-cli-image
 
 tkg:
+  common:
+    node_ova:
   mgmt:
     cluster:
       name: arcas-mgmt
