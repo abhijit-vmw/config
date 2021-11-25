@@ -82,7 +82,7 @@ tkg:
         grafana:
           adminPassword: Admin!23
           
-saas_integrations:
+integrations:
   tmc:
     is_enabled: true
     api_token: tpfHd61N1H7GApAwco62Fe36nRM6Pv2XFb1lunNnwvCIOWqQvGpRQAx9Qkw1Ausx
