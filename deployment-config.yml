@@ -81,7 +81,13 @@ tkg:
       extensions_spec:
         grafana:
           adminPassword: Admin!23
-
+          
+saas_integrations:
+  tmc:
+    is_enabled: true
+    api_token: tpfHd61N1H7GApAwco62Fe36nRM6Pv2XFb1lunNnwvCIOWqQvGpRQAx9Qkw1Ausx
+    cluster_group: arcas-pipeline
+  
 avi:
   vm_name: "arcas-avi"
   # password: Admin!23
