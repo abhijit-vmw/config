@@ -56,7 +56,7 @@ docker:
   insecure_registry: 10.202.233.205:5000
 repo:
   pipelines:
-    url: git@gitlab.eng.vmware.com:arcas-eng/vmware-public.git
+    url: git@gitlab.eng.vmware.com:akangale/vmware-public.git
     branch: develop
   desired-state:
     url: git@github.com:abhijit-vmw/config.git
