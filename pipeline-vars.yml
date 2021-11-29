@@ -83,4 +83,4 @@ vmw-customerconnect:
   username: november@vciportal.com
   password: Qjc4NjhmdmFOSz9HQDI2Cg==
 concourse-curl:
-  file_url: http://192.168.100.48/TMC/tmc
+  file_url: http://192.168.100.36/TMC/tmc
