@@ -87,6 +87,10 @@ integrations:
     is_enabled: true
     api_token: tpfHd61N1H7GApAwco62Fe36nRM6Pv2XFb1lunNnwvCIOWqQvGpRQAx9Qkw1Ausx
     cluster_group: arcas-pipeline
+  to:
+    is_enabled: true
+    api_token: e643426d-be9e-4850-8496-803f0ae6b209
+    wavefront-url: https://surf.wavefront.com
   
 avi:
   vm_name: "arcas-avi"
