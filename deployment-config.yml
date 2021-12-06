@@ -90,7 +90,7 @@ integrations:
   to:
     is_enabled: true
     api_token: e643426d-be9e-4850-8496-803f0ae6b209
-    wavefront-url: https://surf.wavefront.com
+    wavefront_url: https://surf.wavefront.com
   
 avi:
   vm_name: "arcas-avi"
